@@ -4,6 +4,7 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import Works from './components/Works/Works';
+import axios from 'axios';
 
 const App: FC = () => {
 	const myRef = useRef<HTMLDivElement>(null)
@@ -18,21 +19,22 @@ const App: FC = () => {
 		threshold: [0.5,0.6]
 	}
 
+	const handleObserver = (entries: IntersectionObserverEntry[]) => {
+		entries.forEach(entry => {
+			if(entry.isIntersecting && entry.intersectionRatio >= 0.5){
+				setActiveItem(entry.target.id)
+			}
+		})
+	}
+
 	useEffect(() => {
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if(entry.isIntersecting && entry.intersectionRatio >= 0.5){
-					setActiveItem(entry.target.id)
-				}
-			})
-		}, options)
+		const observer = new IntersectionObserver((entries) => handleObserver(entries), options)
 		if(divEl){
 			divElChildren?.forEach((child) => childArr.push(child))
 			childArr.forEach((child: any) => {
 				observer.observe(child)
 			})
 		}
-		return observer.disconnect()
 	}, [])
 
 	return (

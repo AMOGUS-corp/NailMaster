@@ -1,27 +1,16 @@
 import axios from 'axios';
-import { IUser } from './../../models/IUser';
+import { IPriceList } from '../../models/IPrceList';
 import { AppDispatch } from './../store';
-// import { usersFetching, usersFetchingError, usersFetchingSuccess } from './UserSlice';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// export const fetchUsers = () => async (dispatch: AppDispatch) => {
-// 		try{
-// 			dispatch(usersFetching())
-// 			const response = await axios.get<IUser[]>('https://jsonplaceholder.typicode.com/users')
-// 			dispatch(usersFetchingSuccess(response.data))
-// 		}catch(e){
-// 			dispatch(usersFetchingError('Fetching failed'))
-// 		}
-// 	}
-
-export const fetchUsers = createAsyncThunk(
-	'users/fetchUsers',
+export const fetchPriceList = createAsyncThunk(
+	'priceList/fetchPriceList',
 	async (_, thunkAPI) => {
 		try{
-			const response = await axios.get<IUser[]>('https://jsonplaceholder.typicode.com/users')
-			return response.data
+			const response = await axios.get('/data1.json')
+			return Object.values(response.data).flat()
 		}catch{
-			return thunkAPI.rejectWithValue('Users fetching error')
+			return thunkAPI.rejectWithValue('Price list fetching error')
 		}
 	}
 )
