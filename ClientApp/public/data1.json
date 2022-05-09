@@ -196,12 +196,7 @@
  },
  {
   "service": "SMART педикюр",
-  "price": "2300",
-	"category": 3
- },
- {
-  "service": "SMART педикюр",
-  "price": "2500",
+  "price": "2300/2500",
 	"category": 3
  },
  {

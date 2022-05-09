@@ -1,9 +1,23 @@
 .price{
 
+	h2{
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
 	&__title{
-		margin-bottom: 15px;
-		margin-top: 20px;
+		margin-bottom: 10px;
 		font-size: 25px;
+		cursor: pointer;
+		color: gray;
+		transition: color .3s ease;
+
+		&:hover{
+			color: white;
+		}
+		&--active{
+			color: white;
+			border-bottom: 1px solid white;
+		}
 	}
 	&__list{
 		

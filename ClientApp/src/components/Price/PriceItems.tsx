@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import { IPriceList } from '../../models/IPrceList'
 
-interface PriceItemProps{
+interface PriceItemsProps{
 	list: IPriceList[];
 }
 
-const PriceItem: FC<PriceItemProps> = ({list}) => {
+const PriceItems: FC<PriceItemsProps> = ({list}) => {
 	return (
 		<ul className='price__list'>
 			{list.map((el,i) => (
@@ -18,4 +18,4 @@ const PriceItem: FC<PriceItemProps> = ({list}) => {
 	)
 }
 
-export default PriceItem
+export default PriceItems
