@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.ant-select{
+	color: white;
+}
+.ant-select-arrow{
+	color: white;
+}
+.ant-select-selection:hover {
+  background-color: gray;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+	background-color: #181a1b;
+	border: none;
+	border-bottom: 1px solid gray;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	background: #181a1b;
+	font-size: 16px;
+	color: white;
+}
+
+section{
+	margin-top: 50px;
+	height: 100vh;
+}
+
+.container{
+	margin: 0 auto;
+	max-width: 1280px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}

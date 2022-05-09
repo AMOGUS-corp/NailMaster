@@ -1,0 +1,15 @@
+.container{
+	justify-content: center;
+}
+
+.header {
+	height: 100vh;
+	&__title{
+		font-size: 60px;
+		margin-bottom: 15px;
+	}
+	&__desc{
+		max-width: 800px;
+		text-align: center;
+	}
+}

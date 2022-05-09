@@ -1,0 +1,35 @@
+.nav{
+	position: fixed;
+	left: 20px;
+	top: calc(50% - 100px);
+	height: 200px;
+	display: flex;
+	align-items: center;
+
+	&__menu{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
+		&-item{
+			margin-bottom: 20px;
+			height: 100%;
+			a{
+				color: gray;
+				font-size: 14px;
+				transition: all .3s ease-in-out;
+
+				&:hover{
+					color: white;
+				}
+			}
+			&--active{
+				a{
+					font-size: 20px;
+					color: white;
+				}
+			}
+		}
+	}
+}
