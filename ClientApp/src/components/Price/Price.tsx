@@ -3,6 +3,7 @@ import React, { FC, useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks'
 import { fetchPriceList } from '../../store/reducers/ActionCreators'
 import './price.scss'
+import PriceItem from './PriceItem'
 
 const Price: FC = () => {
 	const [activeTitle, setActiveTitle] = useState(1)
@@ -16,12 +17,12 @@ const Price: FC = () => {
 	return (
 		<section id='price' className='price'>
 			<div className="container">
-					<h3>Manicure</h3>
-					{list.filter(el => el.category == 1).map(el => <p>{el.service} {el.price}</p>)}
-					<h3>Pedicure</h3>
-					{list.filter(el => el.category == 2).map(el => <p>{el.service} {el.price}</p>)}
-					<h3>Podiatrick services</h3>
-					{list.filter(el => el.category == 3).map(el => <p>{el.service} {el.price}</p>)}
+					<h3 className='price__title'>Manicure</h3>
+					<PriceItem list={list.filter(el => el.category == 1)}/>
+					<h3 className='price__title'>Pedicure</h3>
+					<PriceItem list={list.filter(el => el.category == 2)}/>
+					<h3 className='price__title'>podological services</h3>
+					<PriceItem list={list.filter(el => el.category == 3)}/>
 			</div>
 		</section>
 	)
