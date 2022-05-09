@@ -4,7 +4,6 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Header from './components/Header/Header';
 import Nav from './components/Nav/Nav';
 import Works from './components/Works/Works';
-import axios from 'axios';
 
 const App: FC = () => {
 	const myRef = useRef<HTMLDivElement>(null)

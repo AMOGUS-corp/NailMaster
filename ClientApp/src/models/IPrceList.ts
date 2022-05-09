@@ -1,4 +1,5 @@
 export interface IPriceList {
-	servive: string;
+	service: string;
 	price: string;
+	category: number;
 }

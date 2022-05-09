@@ -35,5 +35,4 @@ export const PriceListSlice = createSlice({
 }) 
 
 const {actions, reducer} = PriceListSlice
-// export const {usersFetching, usersFetchingError, usersFetchingSuccess} = actions
 export default reducer
