@@ -1,0 +1,26 @@
+.contactUs{
+	
+	&__soc{
+		width: 700px;
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-between;
+		&-item{
+			display: flex;
+			align-items: center;
+			img{
+				height: 50px;
+				margin-right: 20px;
+			}
+		}
+	}
+	&__address{
+		margin-top: 50px;
+		h3{
+			margin-bottom: 10px;
+		}
+		iframe{
+			margin-top: 20px;
+		}
+	}
+}

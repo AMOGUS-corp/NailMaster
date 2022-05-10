@@ -16,15 +16,51 @@
 		}
 	}
 	&__list{
+		width: 700px;
 		
 		&-item{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 700px;
+			width: 100%;
 			border-bottom: 1px solid grey;
 			margin-bottom: 5px;
 			padding: 5px 0;
+			span{
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.price{
+		&__title{
+			margin-bottom: 10px;
+			font-size: 25px;
+		}
+		&__list{
+			width: 580px;
+			&-item{
+				width: 100%;
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px){
+	.price{
+		&__title{
+			font-size: 20px;
+		}
+		&__list{
+			width: 100%;
+			&-item{
+				padding: 5px 10px;
+				p{
+					max-width: 200px;
+					// width: 100%;
+				}
+			}
 		}
 	}
 }

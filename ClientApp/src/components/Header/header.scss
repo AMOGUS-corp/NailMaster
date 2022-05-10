@@ -9,7 +9,24 @@
 		margin-bottom: 15px;
 	}
 	&__desc{
-		max-width: 800px;
+		max-width: 700px;
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.header {
+		height: 400px;
+		&__title{
+			font-size: 40px;
+			margin-bottom: 15px;
+		}
+	}
+}
+@media screen and (max-width: 600px){
+	.header {
+		&__title{
+			font-size: 30px;
+		}
 	}
 }
