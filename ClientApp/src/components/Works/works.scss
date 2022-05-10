@@ -1,6 +1,7 @@
 .works{
 
 	&__gallery{
+		margin-top: 50px;
 		display: grid;
 		grid-template-rows: repeat(3, 250px);
 		grid-template-columns: repeat(2, 350px);

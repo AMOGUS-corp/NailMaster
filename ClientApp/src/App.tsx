@@ -15,7 +15,7 @@ const App: FC = () => {
 	const options = {
 		root: null,
 		rootMargin: '0px',
-		threshold: [0.5,0.6]
+		threshold: [0.4,0.5,0.6]
 	}
 
 	const handleObserver = (entries: IntersectionObserverEntry[]) => {

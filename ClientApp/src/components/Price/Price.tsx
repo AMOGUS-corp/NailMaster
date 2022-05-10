@@ -22,7 +22,7 @@ const Price: FC = () => {
   return (
     <section id="price" className="price">
       <div className="container">
-				<h2 className="title">Price list</h2>
+				<h2 className="title">Прайс лист</h2>
         <h3
           onClick={() => onClick(1)}
           className={
@@ -31,7 +31,7 @@ const Price: FC = () => {
               : "price__title"
           }
         >
-          Manicure
+          Маникюр
         </h3>
         <h3
           onClick={() => onClick(2)}
@@ -41,7 +41,7 @@ const Price: FC = () => {
               : "price__title"
           }
         >
-          Pedicure
+          Педикюр
         </h3>
         <h3
           onClick={() => onClick(3)}
@@ -51,7 +51,7 @@ const Price: FC = () => {
               : "price__title"
           }
         >
-          Podological services
+          Подологические услуги
         </h3>
         {<PriceItems list={list.filter((el) => el.category == activeTitle)} />}
       </div>

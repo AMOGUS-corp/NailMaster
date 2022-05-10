@@ -9,7 +9,7 @@ const ContactUs: FC = () => {
   return (
     <section id="contactUs" className="contactUs">
       <div className="container">
-        <h2 className="title">Contact us</h2>
+        <h2 className="title">Связаться со мной</h2>
         <div className="contactUs__soc">
           <div className="contactUs__soc-item">
             <img src={phone} />
