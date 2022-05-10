@@ -3,7 +3,11 @@ import './contactUs.scss'
 
 const ContactUs: FC = () => {
 	return (
-		<div id='contactUs'>ContactUs</div>
+		<section id='contactUs' className='contactUs'>
+			<div className="container">
+				<h2 className='title'></h2>
+			</div>
+		</section>
 	)
 }
 

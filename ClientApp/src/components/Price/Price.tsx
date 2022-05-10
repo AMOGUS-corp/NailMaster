@@ -22,7 +22,7 @@ const Price: FC = () => {
   return (
     <section id="price" className="price">
       <div className="container">
-				<h2>Price list</h2>
+				<h2 className="title">Price list</h2>
         <h3
           onClick={() => onClick(1)}
           className={
@@ -53,9 +53,7 @@ const Price: FC = () => {
         >
           Podological services
         </h3>
-        {(
-          <PriceItems list={list.filter((el) => el.category == activeTitle)} />
-        )}
+        {<PriceItems list={list.filter((el) => el.category == activeTitle)} />}
       </div>
     </section>
   );
