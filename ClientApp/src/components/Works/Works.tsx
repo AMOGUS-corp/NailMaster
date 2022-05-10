@@ -5,7 +5,7 @@ const Works: FC = () => {
 	return (
 		<section id='works' className='works'>
 			<div className="container">
-				<h2 className='title'>My works</h2>
+				<h2 className='title'>Мои работы</h2>
 				<div className="works__gallery">
 					<div className="works__img"></div>
 					<div className="works__img"></div>

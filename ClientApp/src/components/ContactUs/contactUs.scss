@@ -1,7 +1,7 @@
 .contactUs{
 	
 	&__soc{
-		width: 700px;
+		max-width: 700px;
 		margin-top: 50px;
 		display: flex;
 		justify-content: space-between;
@@ -12,6 +12,9 @@
 				height: 50px;
 				margin-right: 20px;
 			}
+			&:not(:last-child){
+				margin-right: 50px;
+			}
 		}
 	}
 	&__address{
@@ -21,6 +24,33 @@
 		}
 		iframe{
 			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.contactUs{
+		&__address{
+			iframe{
+				width: 580px;
+				height: 400px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px){
+	.contactUs{
+		&__soc{
+			flex-direction: column;
+			&-item{
+				margin-bottom: 20px;
+			}
+		}
+		&__address{
+			iframe{
+				width: 100%;
+				height: 300px;
+			}
 		}
 	}
 }
