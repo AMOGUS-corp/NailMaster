@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "formik": "^2.2.9"
+    "formik": "^2.2.9",
+    "swiper": "^8.1.4"
   }
 }
