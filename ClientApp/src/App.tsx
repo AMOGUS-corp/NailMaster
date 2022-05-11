@@ -9,9 +9,6 @@ const App: FC = () => {
 	const myRef = useRef<HTMLDivElement>(null)
 	const [activeItem, setActiveItem] = useState('header')
 
-	const divEl = myRef.current
-	const divElChildren = divEl?.childNodes
-	const childArr:any = []
 	const options = {
 		root: null,
 		rootMargin: '0px',
@@ -25,15 +22,15 @@ const App: FC = () => {
 			}
 		})
 	}
-
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => handleObserver(entries), options)
-		if(divEl){
-			divElChildren?.forEach((child) => childArr.push(child))
-			childArr.forEach((child: any) => {
-				observer.observe(child)
-			})
-		}
+		myRef.current?.childNodes.forEach((el) => observer.observe(el as Element))
+		// if(divEl){
+		// 	divElChildren?.forEach((child) => childArr.push(child))
+		// 	childArr.forEach((child: any) => {
+		// 		observer.observe(child)
+		// 	})
+		// }
 	}, [])
 
 	return (
