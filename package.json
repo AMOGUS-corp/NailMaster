@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "formik": "^2.2.9",
+    "react-responsive-carousel": "^3.2.23",
     "swiper": "^8.1.4"
   }
 }

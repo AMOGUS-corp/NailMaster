@@ -1,0 +1,41 @@
+.slider{
+	position: relative;
+	width: 700px;
+  height: 700px;
+  overflow: hidden;
+	&__line{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+		left: 0;
+    display: flex;
+		transition: all .5s ease-in-out;
+		img{
+      width: 700px;
+      height: 100%;
+		}
+	}
+	&__btn{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 50px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		cursor: pointer;
+		transition: background .3s ease;
+		&-left{
+			left: 0;
+			background-image: url('../../../assets/icons/left-arrow.png');
+			
+		}
+		&-right{
+			right: 0;
+			background-image: url('../../../assets/icons/right-arrow.png');
+		}
+		&:hover{
+			background-color: rgba(0,0,0,.5);
+		}
+	}
+}
