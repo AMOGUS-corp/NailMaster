@@ -1,5 +1,11 @@
 .price{
-
+	opacity: 0;
+	transform: translateX(600px);
+	transition: all .5s ease-in-out;
+	&--active{
+		opacity: 1;
+		transform: translateX(0);
+	}
 	&__title{
 		margin-bottom: 10px;
 		font-size: 25px;

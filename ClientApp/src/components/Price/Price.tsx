@@ -9,7 +9,7 @@ const Price: FC = () => {
   const [activeTitle, setActiveTitle] = useState(1);
   const dispatch = useAppDispatch();
   const { list, isLoading } = useAppSelector((state) => state.priceList);
-	const {isInView, myRef} = useInView()
+	const {isInView, myRef} = useInView({threshold: .2})
 
   useEffect(() => {
     dispatch(fetchPriceList());
