@@ -4,7 +4,7 @@ import './slider.scss'
 const image = require('../../../assets/images/img1.jpg')
 
 interface SliderProps{
-	children: React.ReactNode
+	children: React.ReactNode;
 }
 
 const Slider: FC<SliderProps> = ({children}) => {

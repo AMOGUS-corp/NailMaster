@@ -37,5 +37,31 @@
 		&:hover{
 			background-color: rgba(0,0,0,.5);
 		}
+		&:active{
+			background-color: rgba(0,0,0,.5);
+		}
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.slider{
+		width: 550px;
+		height: 550px;
+		&__line{
+			img{
+				width: 550px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 600px){
+	.slider{
+		width: 320px;
+		height: 360px;
+		&__line{
+			img{
+				width: 320px;
+			}
+		}
 	}
 }

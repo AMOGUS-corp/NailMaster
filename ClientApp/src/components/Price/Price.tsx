@@ -1,15 +1,15 @@
-import axios from "axios";
 import React, { FC, useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { useInView } from "../../hooks/useInView";
 import { fetchPriceList } from "../../store/reducers/ActionCreators";
 import "./price.scss";
 import PriceItems from "./PriceItems";
 
 const Price: FC = () => {
   const [activeTitle, setActiveTitle] = useState(1);
-
   const dispatch = useAppDispatch();
   const { list, isLoading } = useAppSelector((state) => state.priceList);
+	const {isInView, myRef} = useInView()
 
   useEffect(() => {
     dispatch(fetchPriceList());
@@ -20,7 +20,7 @@ const Price: FC = () => {
   };
 
   return (
-    <section id="price" className="price">
+    <section ref={myRef} id="price" className={isInView ? 'price price--active' : 'price'}>
       <div className="container">
 				<h2 className="title">Прайс лист</h2>
         <h3
