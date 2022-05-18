@@ -5,7 +5,7 @@ import "./works.scss";
 const image = require('../../assets/images/img1.jpg')
 
 const Works: FC = () => {
-	const {isInView, myRef} = useInView({rootMargin: '200px'})
+	const {isInView, myRef} = useInView({threshold: 0.5})
 
   return (
     <section ref={myRef} id='works' className={isInView ? 'works works--active' : 'works'}>

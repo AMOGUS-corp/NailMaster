@@ -1,10 +1,14 @@
 .works{
-	opacity: 0;
-	transform: translateY(600px);
-	transition: all .5s ease-in-out;
+	.container{
+		opacity: 0;
+		transform: translateY(600px);
+		transition: all .5s ease-in-out;
+	}
 	&--active{
-		opacity: 1;
-		transform: translateY(0);
+		.container{
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 	&__gallery{
 		margin-top: 50px;
